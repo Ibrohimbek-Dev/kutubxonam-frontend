@@ -7,7 +7,7 @@ import { useStateValue } from "../../context/StateProvider";
 import { actionType } from "../../context/reducer";
 import { GoogleAuthBg } from "../../assets/videos/index";
 import { useSidebar } from "../../context/SidebarProvider";
-import { getAllUsers, validateUser } from "../../api/user-api";
+import { validateUser } from "../../api/user-api";
 
 const GoogleAuth = ({ setGoogleAuth }) => {
   const firebaseAuth = getAuth(app);
@@ -16,15 +16,14 @@ const GoogleAuth = ({ setGoogleAuth }) => {
 
   const navigate = useNavigate();
 
-  const [{ user, allUsers }, dispatch] = useStateValue();
+  const [{  }, dispatch] = useStateValue();
 
   const loginWithGoogle = async () => {
     try {
       const userCredential = await signInWithPopup(firebaseAuth, provider);
       if (userCredential) {
         setGoogleAuth(true);
-        window.localStorage.setItem("auth", "true");
-        console.log("user: ", user)
+        window.localStorage.setItem("auth", "true");        
 
         const user = userCredential.user;
         if (user) {
@@ -32,7 +31,6 @@ const GoogleAuth = ({ setGoogleAuth }) => {
           if (token) {
             const data = await validateUser(token);
             if (data) {
-              console.log("data: ", data)
               dispatch({
                 type: actionType.SET_USER,
                 user: data,

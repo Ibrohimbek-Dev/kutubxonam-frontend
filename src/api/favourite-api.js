@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:4000/";
+const baseURL = "https://my-library-full-b681a2c722c2.herokuapp.com/";
+console.log("baseURL: ", baseURL)
 
 export const getAllFavourites = async () => {
   try {

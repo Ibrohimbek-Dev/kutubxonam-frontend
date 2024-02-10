@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.2.1",
     "axios": "^1.6.2",
     "classnames": "^2.5.1",
+    "dotenv": "^16.4.1",
     "file-saver": "^2.0.5",
     "firebase": "^10.7.0",
     "framer-motion": "^10.16.12",
