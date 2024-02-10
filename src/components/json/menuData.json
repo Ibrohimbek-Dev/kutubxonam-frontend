@@ -1,0 +1,110 @@
+[
+  {
+    "menuName": "Kutubxonam kitoblari",
+    "subMenus": [
+      {
+        "0": "Barcha kitoblar"
+      }
+    ]    
+  },
+  {
+    "menuName": "Badiiy kitoblar",
+    "subMenus": [
+      
+      "Barcha kitoblar",
+      "Jahon adabiyoti",
+      "O'zbek adabiyoti",
+      "Zamonaviy o'zbek adabiyoti"
+    ]
+  },
+  {
+    "menuName": "Psixologiya va shaxsiy rivojlanish",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "Biznes kitoblar",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "Bolalar adabiyoti",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "Diniy adabiyotlar",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "IT sohasiga oid kitoblar",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "Rus tilidagi kitoblar",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "Koreys tilidagi kitoblar",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "Ingliz tilidagi kitoblar",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "Chet tilini o'rganish",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "Ilm - fan va darsliklar",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "TOP-100 ta bestseller",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "Bestseller to'plamlar",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "Detektiv va fantastika",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "Siyosat",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  },
+  {
+    "menuName": "Biografiya",
+    "subMenus": [
+      "Barcha kitoblar"
+    ]
+  }
+]
