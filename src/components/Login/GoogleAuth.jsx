@@ -37,7 +37,7 @@ const GoogleAuth = ({ setGoogleAuth }) => {
               });
               setLoginOptions(false);
               setOpenMenu(false);
-              navigate("/", { replace: true });
+              navigate("/home", { replace: true });
               
               return;
             }
@@ -59,7 +59,7 @@ const GoogleAuth = ({ setGoogleAuth }) => {
 
   useEffect(() => {
     if (window.localStorage.getItem("auth") === "true") {
-      navigate("/", { replace: true });
+      navigate("/home", { replace: true });
     }
   });
 

@@ -92,7 +92,7 @@ const App = () => {
     const checkUserRole = async () => {
       if ((await user?.user?.role) !== "admin") {
         console.log("user.user.role: ", user?.user?.role);
-        navigate("/", { replace: true });
+        navigate("/home", { replace: true });
       }
     };
 
@@ -110,8 +110,7 @@ const App = () => {
           ))}
         <Routes>
           <Route path="/*" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />          
           <Route
             path="/google-login"
             element={<GoogleAuth setGoogleAuth={setAuth} />}

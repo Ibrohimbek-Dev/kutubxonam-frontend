@@ -30,14 +30,14 @@ const UserInfo = () => {
         window.localStorage.setItem("auth", "false");
       })
       .catch((e) => console.log(e));
-    navigate("/", { replace: true });
+    navigate("/home", { replace: true });
   };
   useResizeMin768px(setIsMenuOpen);
 
   const signWithAnotherAccount = async () => {
     try {
       await signInWithRedirect(firebaseAuth, provider);
-      navigate("/", {replace: true})
+      navigate("/home", { replace: true });
     } catch (error) {
       console.error("Error during Google sign-in:", error);
     }
