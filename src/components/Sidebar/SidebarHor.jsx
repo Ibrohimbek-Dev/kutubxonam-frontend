@@ -5,11 +5,13 @@ import menuData from "../json/menuData.json";
 import "../../css/scrollbar.css";
 import { VscLayersActive, VscLayers } from "react-icons/vsc";
 import { useClickOutside } from "../../hooks/hooksFuncs";
+import { useStateValue } from "../../context/StateProvider";
 
 const SidebarHor = ({ openSidebarHor }) => {
   const [subMenus, setSubMenus] = useState({});
   const [iconClicked, setIconClicked] = useState(false);
   const menuSideOptionsRef = useRef(null);
+  const [{ allStories }, dispatch] = useStateValue();
 
   const toggleSubMenu = (menu) => {
     setSubMenus((prevSubMenus) => ({
@@ -24,7 +26,7 @@ const SidebarHor = ({ openSidebarHor }) => {
     setIconClicked(false);
   };
 
-  useClickOutside(menuSideOptionsRef, () => {    
+  useClickOutside(menuSideOptionsRef, () => {
     setSubMenus({});
   });
 
@@ -58,7 +60,7 @@ const SidebarHor = ({ openSidebarHor }) => {
                   <p
                     className={`text-black text-sm underline decoration-dotted sm:text-base`}
                   >
-                    {menu.menuName}
+                    {menu.menuName}                    
                   </p>
                   {subMenus[menu.menuName] ? (
                     <IoMdArrowDropdown className="text-2xl text-black" />
@@ -69,7 +71,7 @@ const SidebarHor = ({ openSidebarHor }) => {
                 <AnimatePresence>
                   {subMenus[menu.menuName] && (
                     <motion.ul
-                      className="text-black flex flex-col"
+                      className="pl-4 text-black"
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
@@ -77,10 +79,14 @@ const SidebarHor = ({ openSidebarHor }) => {
                     >
                       {menu.subMenus.map((subMenu, subIndex) => (
                         <li
-                          className="my-1 text-right cursor-pointer px-1 text-black border hover:bg-gray-200 rounded-md"
+                          className="my-1 cursor-pointer px-1 text-black border hover:bg-gray-200 rounded-md"
                           key={subIndex}
                         >
-                          {subMenu}
+                          {typeof subMenu === "object" &&
+                          subIndex in subMenu &&
+                          allStories?.length > 0
+                            ? subMenu[subIndex] + ` (${allStories?.length})`
+                            : subMenu + " (0)"}
                         </li>
                       ))}
                     </motion.ul>
