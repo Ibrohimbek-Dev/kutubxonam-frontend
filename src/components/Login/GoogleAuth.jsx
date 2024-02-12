@@ -65,7 +65,7 @@ const GoogleAuth = ({ setGoogleAuth }) => {
 
 
   return (
-    <div className="relative z-50 w-screen h-screen bg-[#7BA05B]">
+    <div className="relative w-screen h-screen">
       <video
         src={GoogleAuthBg}
         type="video/mp4"

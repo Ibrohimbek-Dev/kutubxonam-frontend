@@ -1,16 +1,15 @@
 import { getApp, getApps, initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
-import "firebase/storage"
-
+import "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAz6oorPeBXaakAu8Cp5rYkcUPmLbeCW2Q",
-  authDomain: "kutubxonam-fb6c3.firebaseapp.com",
-  projectId: "kutubxonam-fb6c3",
-  storageBucket: "kutubxonam-fb6c3.appspot.com",
-  messagingSenderId: "532102483889",
-  appId: "1:532102483889:web:0dc55080a2f5e19087f790",
-  measurementId: "G-95YYFR0R13"
+  apiKey: "AIzaSyDtPv17_JWI2PWmUYYxK--0cjoEA2C6U8U",
+  authDomain: "kutubxonam-uz.firebaseapp.com",
+  projectId: "kutubxonam-uz",
+  storageBucket: "kutubxonam-uz.appspot.com",
+  messagingSenderId: "970430153573",
+  appId: "1:970430153573:web:7c1786a9e3be27bc0d978c",
+  measurementId: "G-M3Q6BEN1HB",
 };
 
 const app = getApps.length > 0 ? getApp() : initializeApp(firebaseConfig);
