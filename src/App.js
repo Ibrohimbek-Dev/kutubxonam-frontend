@@ -109,8 +109,24 @@ const App = () => {
             </div>
           ))}
         <Routes>
-          <Route path="/*" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<Home />} />          
+          <Route
+            path="*"
+            element={<Navigate to="/home" replace />}
+            shouldNavigate={(_, location) => {
+              const { pathname } = location;
+
+              // Exclude specific paths from redirection
+              if (
+                pathname.startsWith("/accounts/google") ||
+                pathname.startsWith("/kutubxonam-fb6c3.firebaseapp.com")
+              ) {
+                return false;
+              }
+
+              return true;
+            }}
+          />
+          <Route path="/home" element={<Home />} />
           <Route
             path="/google-login"
             element={<GoogleAuth setGoogleAuth={setAuth} />}
