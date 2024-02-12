@@ -65,14 +65,15 @@ const GoogleAuth = ({ setGoogleAuth }) => {
 
 
   return (
-    <div className="relative w-screen h-screen">
+    <div className="relative w-screen h-screen bg-[#7BA05B]">
       <video
         src={GoogleAuthBg}
         type="video/mp4"
         autoPlay
         muted
         loop
-        className="w-full h-full object-cover"
+        className="w-full h-full object-contain md:object-cover"
+        controls={false}
       ></video>
       <div className="absolute inset-0 bg-darkOverlay flex items-center justify-center p-4">
         <div className="w-full md:w-375 p-4 bg-lightOverlay shadow-2xl rounded-md backdrop-blur-md flex flex-col items-center justify-center">
