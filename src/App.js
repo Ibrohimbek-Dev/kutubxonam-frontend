@@ -108,9 +108,9 @@ const App = () => {
               <Loader />
             </div>
           ))}
-        <Routes>          
-          <Route path="/home" element={<Home />} />         
-          <Route path="/" element={<Home />} />         
+        <Routes>
+          <Route path="/*" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Home />} />                          
           <Route
             path="/google-login"
             element={<GoogleAuth setGoogleAuth={setAuth} />}

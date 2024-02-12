@@ -72,7 +72,7 @@ const GoogleAuth = ({ setGoogleAuth }) => {
         autoPlay
         muted
         loop
-        className="w-full h-full object-contain md:object-cover"
+        className="w-full h-full object-cover"
         controls={false}
       ></video>
       <div className="absolute inset-0 bg-darkOverlay flex items-center justify-center p-4">
