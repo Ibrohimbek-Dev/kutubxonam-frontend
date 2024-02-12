@@ -25,7 +25,7 @@ const GoogleAuth = ({ setGoogleAuth }) => {
         setGoogleAuth(true);
         window.localStorage.setItem("auth", "true");        
 
-        const user = userCredential.user;
+        const user = userCredential.user;        
         if (user) {
           const token = await user.getIdToken();
           if (token) {

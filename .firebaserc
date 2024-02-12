@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "kutubxonam-fb6c3"
-  }
+    "default": "kutubxonam-uz",
+    "staging": "kutubxonam-uz"
+  },
+  "targets": {},
+  "etags": {}
 }

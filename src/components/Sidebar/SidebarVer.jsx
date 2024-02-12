@@ -91,5 +91,3 @@ const SidebarVer = ({ openSidebarVer }) => {
 };
 
 export default SidebarVer;
-
-// Ushbu qismida, bosilgan sub menu'larni Home'da ko'rsatishim kerak

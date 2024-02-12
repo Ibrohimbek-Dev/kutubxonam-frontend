@@ -29,6 +29,9 @@ const App = () => {
 
   const [isLoading, setIsLoading] = useState(false);
 
+
+  console.log("allStories: ", allStories)
+
   useEffect(() => {
     setIsLoading(true);
     firebaseAuth.onAuthStateChanged((userCred) => {

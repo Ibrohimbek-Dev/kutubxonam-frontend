@@ -1,6 +1,6 @@
 import axios from "axios";
-
-const baseURL = "https://my-library-full-b681a2c722c2.herokuapp.com/";
+const baseURL = "https://kutubxonam-backend-dce6318bdf52.herokuapp.com/";
+// const baseURL = "http://localhost:4000/";
 
 export const getAllStories = async () => {
   try {
