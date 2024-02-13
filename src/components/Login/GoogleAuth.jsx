@@ -72,7 +72,7 @@ const GoogleAuth = ({ setGoogleAuth }) => {
 				muted
 				loop
 				playsInline
-				className="w-full h-full object-cover bg-[#7BA05B] select-none"
+				className="w-full h-full object-contain md:object-cover bg-[#7BA05B] select-none"
 				controls={false}
 				controlsList="nodownload nodrag noremoteplayback"
 				disablePictureInPicture
